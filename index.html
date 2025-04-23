@@ -7,26 +7,25 @@
 </head>
 <body>
  <script>
-let height=5;
-let row=1;
- do{
-    let spaces='';
-    let stars='';
-    let spaceCount= height-row;
-    let starCount = 2 * row -1;
+    const primes=[1,2,3,5,7,9,11,13,17,19,23,29,31,37,41,47,53,59,61,67,71,73,79,83,89,97];
+    let output = " # Prime Numbers \n\n";
     let i=0;
+    const cols=5;
+    output += "|".padEnd(7, " ")+"|".padEnd(7, " ")+"|".padEnd(7, " ")+"|".padEnd(7, " ")+"|".padEnd(7, " ")+"|\n";
     do{
-        spaces += '';
-        i++;
-    }while( i< spaceCount);
-    let j=0;
-    do{
-        stars += '*';
-        j++;
-    }while( j< starCount);
-    console.log(spaces + stars);
-    row++;
-}while (row<=height);
+        output+="|";
+        let j=0;
+        do{
+            if(i<primes.length){
+                output+=` ${primes[i].toString().padEnd(4)} |`;
+                i++;
+
+            }
+            j++;
+        } while(j<cols);
+        output+="\n";
+    } while(i<primes.length);
+    console.log(output);
 
     
 
