@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+let height=5;
+let row=1;
+ do{
+    let spaces='';
+    let stars='';
+    let spaceCount= height-row;
+    let starCount = 2 * row -1;
+    let i=0;
+    do{
+        spaces += '';
+        i++;
+    }while( i< spaceCount);
+    let j=0;
+    do{
+        stars += '*';
+        j++;
+    }while( j< starCount);
+    console.log(spaces + stars);
+    row++;
+}while (row<=height);
+
+    
+
+ </script>
+</body>
+</html>
